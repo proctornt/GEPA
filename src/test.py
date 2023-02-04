@@ -21,7 +21,7 @@ annualrain = dataset.select('bio12')
 landcoverdata=ee.Image("ESA/GLOBCOVER_L4_200901_200912_V2_3")
 landtype=landcoverdata.select('landcover')
 #Eu, Copernicus Climate Project 
-collection = ee.ImageCollection("ECMWF/ERA5/MONTHLY").filterBounds(U_point).filterDate('1979-01-01', '2022-10-01')
+collection = ee.ImageCollection("ECMWF/ERA5/MONTHLY").filterBounds(U_point).filterDate('1980-01-01', '2022-10-01')
 reduced_to_image = collection.reduce(ee.Reducer.mean())
 
 
